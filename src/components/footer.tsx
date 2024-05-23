@@ -33,7 +33,7 @@ export default function Footer() {
                             width={16}
                             height={16}
                         />
-                        <p className="ml-2">jonalfaro1605@gmail.com</p>
+                        <a href="mailto:jonalfaro1605@gmail.com" className="ml-2">jonalfaro1605@gmail.com</a>
                     </div>
                     <div className="flex items-center">
                         <Image
@@ -55,7 +55,7 @@ export default function Footer() {
                             width={19}
                             height={17}
                         />
-                        <p className="ml-2">Facebook</p>
+                        <a href="https://www.facebook.com/jona.alfa/" className="ml-2">Facebook</a>
                     </div>
                     <div className="flex items-center">
                         <Image
@@ -64,7 +64,7 @@ export default function Footer() {
                             width={19}
                             height={17}
                         />
-                        <p className="ml-2">Instagram</p>
+                        <a href="https://www.instagram.com/jona_a1fa/" className="ml-2">Instagram</a>
                     </div>
                     <div className="flex items-center">
                         <Image
@@ -73,12 +73,12 @@ export default function Footer() {
                             width={19}
                             height={17}
                         />
-                        <p className="ml-2">LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/jonathan-alfaro-aba21228a/" className="ml-2">LinkedIn</a>
                     </div>
                 </div>
             </nav>
-            <div className="text-stone-700 text-center">
-                <p>© 2024 Jonthan Alfaro Herrera. Todos los derechos reservados</p>
+            <div className="text-stone-400 text-center">
+                <p>© 2024 Jonathan Alfaro Herrera. Todos los derechos reservados</p>
             </div>
         </div>
     )
