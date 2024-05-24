@@ -33,7 +33,7 @@ export default function Footer() {
                             width={16}
                             height={16}
                         />
-                        <a href="mailto:jonalfaro1605@gmail.com" className="ml-2">jonalfaro1605@gmail.com</a>
+                        <a href="mailto:jonalfaro1605@gmail.com" className="ml-2 hover:text-blue-600 hover:underline underline-offset ">jonalfaro1605@gmail.com</a>
                     </div>
                     <div className="flex items-center">
                         <Image
@@ -55,7 +55,7 @@ export default function Footer() {
                             width={19}
                             height={17}
                         />
-                        <a href="https://www.facebook.com/jona.alfa/" className="ml-2">Facebook</a>
+                        <a href="https://www.facebook.com/jona.alfa/" className="ml-2 hover:text-blue-800">Facebook</a>
                     </div>
                     <div className="flex items-center">
                         <Image
@@ -64,7 +64,7 @@ export default function Footer() {
                             width={19}
                             height={17}
                         />
-                        <a href="https://www.instagram.com/jona_a1fa/" className="ml-2">Instagram</a>
+                        <a href="https://www.instagram.com/jona_a1fa/" className="ml-2 hover:text-rose-400">Instagram</a>
                     </div>
                     <div className="flex items-center">
                         <Image
@@ -73,7 +73,7 @@ export default function Footer() {
                             width={19}
                             height={17}
                         />
-                        <a href="https://www.linkedin.com/in/jonathan-alfaro-aba21228a/" className="ml-2">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/jonathan-alfaro-aba21228a/" className="ml-2 hover:text-blue-600">LinkedIn</a>
                     </div>
                 </div>
             </nav>

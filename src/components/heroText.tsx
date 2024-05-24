@@ -6,7 +6,7 @@ interface HeroProps {
 export default function HeroText(props: HeroProps) {
   return (
     <div>
-      <div className="justify-start text-left z-20">
+      <div className="justify-start text-left z-20 transform transition duration-300 hover:scale-110">
         <h1 className="text-2xl border-b-2 border-teal-500 text-black">{props.title}</h1>
         <ul>
           {props.text.map((item, index) => (

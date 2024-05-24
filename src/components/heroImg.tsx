@@ -11,7 +11,7 @@ interface HeroProps {
 
 export default function HeroImg(props: HeroProps) {
   return (
-     <div className="">
+     <div className="transform transition duration-500 hover:scale-110">
       <Image
         src = {props.imgData}
         alt = {props.imgAlt}
