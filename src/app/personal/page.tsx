@@ -10,8 +10,8 @@ import reactImg from "/public/img/react-logo.png";
 export default function Personal() {
   return (
     <div className="flex text-black text-justify">
-      <div className="w-1/3 bg-gray-200 p-5">
-        <div className="bg-stone-500 rounded-lg mb-2 p-4">
+      <div className="w-1/3 bg-teal-100 p-5">
+        <div className="rounded-lg mb-2 p-4">
           <div>
             <Image
               className="rounded-3xl p-4"
@@ -73,8 +73,8 @@ export default function Personal() {
         </div>
       </div>
 
-      <div className="w-2/3 bg-gray-300 p-5">
-        <div className="p-4 bg-gray-500 rounded-xl m-2 list-none">
+      <div className="w-2/3 bg-teal-50 p-5">
+        <div className="p-4 text-black m-2 ">
           <HeroText 
             title="Sobre mi"
             text={[
@@ -84,13 +84,13 @@ export default function Personal() {
         </div>
 
         <div className="flex  m-3 justify-between">
-          <div className="w-1/2 p-4 bg-gray-500 rounded-xl m-2">
+          <div className="w-1/2 p-4 rounded-xl m-2">
             <HeroText
               title="Experiencia Laboral"
               text={["Hospital Juana Pirola", "Pasante en el area informatica","Cocreador de la Pascalina","Sembrador de yuca profecional","Inspirador del diseño de la maquina de Turing", "Pela papas de medio tiempo", "Infla botellas por hobby"]}
             />
           </div>
-          <div className="w-1/2 p-4 bg-gray-500 rounded-xl m-2">
+          <div className="w-1/2 p-4 rounded-xl m-2">
             <HeroText
               title="Formacion Academica"
               text={[
@@ -101,7 +101,7 @@ export default function Personal() {
           </div>
         </div>
 
-        <div className="p-4 bg-gray-500 rounded-xl">
+        <div className="p-4  rounded-xl">
           <HeroText title="Referencias" text={["Allan Turing","El chino de la pulperia", "Juanqui Loco","Mi tata"]} />
         </div>
       </div>

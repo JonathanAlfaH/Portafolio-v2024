@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Footer() {
     return (
-        <div className="w-full text-white z-10 bg-gradient-to-t from-neutral-950 to-slate-800">
+        <div className="w-full text-white z-10 bg-gradient-to-t from-teal-700 to-teal-500">
             <nav className="container relative flex flex-wrap mx-auto p-5 justify-between">
                 <div className="w-1/3 flex flex-wrap justify-center">
                     <div>
@@ -16,11 +16,11 @@ export default function Footer() {
                 </div>
 
                 <div className="w-1/3">
-                    <h1 className="text-xl w-1/2 border-b">Contacto</h1>
+                    <h1 className="text-xl w-1/2 border-b-2 border-slate-700 text-slate-700">Contacto</h1>
                     <div className="flex flex-wrap items-center">
                         <Image
                             src="/img/telephone.png"
-                            alt="Descripción de la imagen"
+                            alt="Marca personal"
                             width={16}
                             height={16}
                         />
@@ -47,7 +47,7 @@ export default function Footer() {
                 </div>
 
                 <div className="w-1/3">
-                    <h1 className="text-xl w-1/2 border-b">Redes Sociales</h1>
+                    <h1 className="text-xl w-1/2 border-b-2 border-slate-700 text-slate-700">Redes Sociales</h1>
                     <div className="flex items-center">
                         <Image
                             src="/img/facebook.png"

@@ -73,26 +73,40 @@ export default function Projects() {
   };
 
   return (
-    <div className="container mx-auto h-screen justufy-center mt-20" >
+    <div >
+      <div className=" h-screen justufy-center bg-teal-50" >
       <div className='flex justify-center'>
-        <h1 className="text-2xl font-bold mb-4">GitHub Repositorios</h1>
+        <h1 className="text-2xl text-teal-500 font-bold mt-10">GitHub Repositorios</h1>
       </div>
       {repos.length === 0 ? (
-        <p>No se encontro repositorio.</p>
+        <div className='flex justify-center'>
+        <p className='text-gray-500'>No se encontro repositorio.</p>
+        </div>
       ) : (
-        <Slider {...settings}>
+        <Slider {...settings} className='m-20' >
           {repos.map((repo) => (
             <div key={repo.id} className="p-1">
-              <div className="h-[200px] border rounded-lg p-4 h-full flex flex-col bg-gray-200">
-                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-blue-500 mb-2">
+              <div className="h-full  rounded-lg p-4 flex flex-col bg-gray-500 ">
+                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-teal-400 mb-2">
                   {repo.name}
                 </a>
-                <p className="text-gray-700 flex-grow">{repo.description}</p>
+                
+                <p className="text-white flex-grow text-justify mb-4">{repo.description}</p>
+
+                <div className='flex justify-center'>
+                  <a href={repo.html_url} className="text-white hover:text-blue-500 text-sm found-sans">
+                  Ver Repositorio
+                </a>
+                </div>
+                <div className='flex justify-center'>
+                <a className="text-white hover:text-blue-500 text-sm found-sans" href={repo.html_url+'/archive/refs/heads/main.zip'} >Descargar</a>
+                </div>
               </div>
             </div>
           ))}
         </Slider>
       )}
+      </div>
     </div>
   )
 }
