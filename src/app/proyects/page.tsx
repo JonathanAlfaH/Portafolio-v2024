@@ -27,7 +27,7 @@ async function getRepositories(username: string): Promise<Repos[]> {
 
 export default function Projects() {
   const [repos, setRepos] = useState<Repos[]>([]);
-  const username = "JonathanAlfaH"; // Puedes configurar esto dinámicamente si es necesario
+  const username = "JonathanAlfaH"; 
 
   useEffect(() => {
     async function fetchData() {
@@ -73,20 +73,20 @@ export default function Projects() {
   };
 
   return (
-    <div >
-      <div className=" h-screen justufy-center bg-teal-50" >
-      <div className='flex justify-center'>
-        <h1 className="text-2xl text-teal-500 font-bold mt-10">GitHub Repositorios</h1>
-      </div>
+    <div className="flex flex-col items-center bg-teal-50 min-h-screen p-5">
+      <h1 className="text-2xl text-teal-500 font-bold mt-10">GitHub Repositorios</h1>
+      <p className="text-gray-500 mt-5 text-justify text-center w-4/5 md:w-1/2">
+        En esta sección podrás encontrar una colección de mis proyectos, trabajos y contribuciones de código abierto, donde cada repositorio refleja mi pasión por la programación, la innovación y el aprendizaje continuo.
+      </p>
       {repos.length === 0 ? (
         <div className='flex justify-center'>
         <p className='text-gray-500'>No se encontro repositorio.</p>
         </div>
       ) : (
-        <Slider {...settings} className='m-20' >
+        <Slider {...settings} className="w-full md:w-4/5 mt-10" >
           {repos.map((repo) => (
             <div key={repo.id} className="p-1">
-              <div className="h-full  rounded-lg p-4 flex flex-col bg-gray-500 ">
+              <div className="h-[250px]  rounded-lg p-4 flex flex-col bg-gray-500 ">
                 <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-teal-400 mb-2">
                   {repo.name}
                 </a>
@@ -107,7 +107,6 @@ export default function Projects() {
         </Slider>
       )}
       </div>
-    </div>
   )
 }
 

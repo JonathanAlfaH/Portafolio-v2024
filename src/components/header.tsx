@@ -10,9 +10,9 @@ export default function Header() {
                 <Link href="/" className="font-bold text-3xl"> Inicio </Link>
                 </div>
                 <div className="space-x-4 text-xl ">
-                    <Link href="/personal" className="hover:underline"> Personal </Link>
+                    <Link href="/personal" className="hover:underline"> Curriculum </Link>
                     <Link href="/proyects" className="hover:underline"> Proyectos </Link>
-                    <Link href="mailto:jonalfaro1604@gmail.com"><button className="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-full">Contrar</button></Link>
+                    <Link href="mailto:jonalfaro1604@gmail.com"><button className="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-full">Contratar</button></Link>
                 </div>
             </nav>
         </div>
