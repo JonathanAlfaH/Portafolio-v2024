@@ -11,32 +11,32 @@ interface Repos {
   html_url: string;
 }
 
-async function getRepositories(username: string): Promise<Repos[]> {
+async function getRepositories(): Promise<Repos[]> {
+  const username = process.env.NEXT_PUBLIC_USER;
   try {
     const response = await fetch(`https://api.github.com/users/${username}/repos`);
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('La respuesta de la red no fue correcta');
     }
     const repositories = await response.json() as Repos[];
     return repositories;
   } catch (error) {
-    console.error('Error fetching repositories:', error);
+    console.error('Error al recuperar repositorios:', error);
     return [];
   }
 }
 
 export default function Projects() {
   const [repos, setRepos] = useState<Repos[]>([]);
-  const username = "JonathanAlfaH"; 
 
   useEffect(() => {
     async function fetchData() {
-      const repositories = await getRepositories(username);
+      const repositories = await getRepositories();
       setRepos(repositories);
     }
 
     fetchData();
-  }, [username]);
+  }, []);
 
   const settings = {
     dots: true,
@@ -80,33 +80,30 @@ export default function Projects() {
       </p>
       {repos.length === 0 ? (
         <div className='flex justify-center'>
-        <p className='text-gray-500'>No se encontro repositorio.</p>
+          <p className='text-gray-500'>No se encontró repositorio.</p>
         </div>
       ) : (
-        <Slider {...settings} className="w-full md:w-4/5 mt-10" >
+        <Slider {...settings} className="w-full md:w-4/5 mt-10">
           {repos.map((repo) => (
             <div key={repo.id} className="p-1">
-              <div className="h-[250px]  rounded-lg p-4 flex flex-col bg-gray-500 ">
+              <div className="h-[250px] rounded-lg p-4 flex flex-col bg-gray-500">
                 <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-teal-400 mb-2">
                   {repo.name}
                 </a>
-                
                 <p className="text-white flex-grow text-justify mb-4">{repo.description}</p>
-
                 <div className='flex justify-center'>
                   <a href={repo.html_url} className="text-white hover:text-blue-500 text-sm found-sans">
-                  Ver Repositorio
-                </a>
+                    Ver Repositorio
+                  </a>
                 </div>
                 <div className='flex justify-center'>
-                <a className="text-white hover:text-blue-500 text-sm found-sans" href={repo.html_url+'/archive/refs/heads/main.zip'} >Descargar</a>
+                  <a className="text-white hover:text-blue-500 text-sm found-sans" href={repo.html_url + '/archive/refs/heads/main.zip'}>Descargar</a>
                 </div>
               </div>
             </div>
           ))}
         </Slider>
       )}
-      </div>
-  )
+    </div>
+  );
 }
-

@@ -9,7 +9,7 @@ export default function Header() {
                 <img src="/img/Marca personal.png" className="w-16 h-16 "></img>
                 <Link href="/" className="font-bold text-3xl"> Inicio </Link>
                 </div>
-                <div className="space-x-4 text-xl ">
+                <div className="space-x-2 text-xl ">
                     <Link href="/personal" className="hover:underline"> Curriculum </Link>
                     <Link href="/proyects" className="hover:underline"> Proyectos </Link>
                     <Link href="mailto:jonalfaro1604@gmail.com"><button className="bg-green-600 hover:bg-green-800 text-white font-bold py-1 px-2 rounded-full">Contratar</button></Link>
