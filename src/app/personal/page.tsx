@@ -126,7 +126,7 @@ export default function Personal() {
             ]} description={[
               "-Supervisor de la practica profesional",
               "-Encargada de las Horas Estudiante UCR",
-              "-Patron de la productora de tomate"
+              "-Patron de la productora de tomates"
             ]} />
         </div>
       </div>
